@@ -1,0 +1,37 @@
+.sidebar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hide the sidebar off-screen */
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidebar.open {
+  left: 0; /* Display the sidebar when it's open */
+}
+
+.sidebar-content {
+  padding: 16px;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 16px;
+  color: white;
+  display: none; /* Hide the hamburger by default on larger screens */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
